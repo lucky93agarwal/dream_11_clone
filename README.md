@@ -2,12 +2,6 @@
 A working  fantasy sports platform Mobile App clone built in Flutter using Firebase auth,realtime,firestore database and storage.
 
 
-![bannerone](https://github.com/lucky93agarwal/dream_11_clone/assets/53622073/2a277fdf-291c-4b90-a0d9-62959a6aebb0)
-
-![banner](https://github.com/lucky93agarwal/dream_11_clone/assets/53622073/7165e88d-3b95-46e5-87ea-c399a4db5d4f)
-
-![original-a40d5f00e71a940a76d6635404a5b039](https://github.com/lucky93agarwal/dream_11_clone/assets/53622073/e293220f-c8f7-41ab-86ab-cbbd9b64e05e)
-
 
 ## Screen
 
