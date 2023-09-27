@@ -1,14 +1,13 @@
+import 'package:dream_11_clone/controller/splash_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
-class SplashScreen extends StatefulWidget {
+
+
+class SplashScreen extends GetView<SplashController>{
   const SplashScreen({super.key});
 
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();

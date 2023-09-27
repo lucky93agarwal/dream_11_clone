@@ -67,6 +67,13 @@ A working  fantasy sports platform Mobile App clone built in Flutter using Fireb
 * [package_info_plus](https://pub.dev/packages/package_info_plus)
 </details>
 
+## How to generate SHA-1
+Step 1. Open terminal for android folder
+Step 2. after that you can type below command
+```
+.\gradlew signinReport
+```
+Step 3. Ctrl + Enter press
 
 ## How to publish Flutter app on Play Store: Beginner guide
 Step 1. Create an upload keystore:

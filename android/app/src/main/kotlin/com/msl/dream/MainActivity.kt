@@ -1,4 +1,4 @@
-package com.example.dream_11_clone
+package com.msl.dream
 
 import io.flutter.embedding.android.FlutterActivity
 
