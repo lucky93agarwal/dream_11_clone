@@ -39,6 +39,10 @@ dependencies:
   url_launcher: ^6.1.14
   intl: ^0.18.1
   package_info_plus: ^4.1.0
+  share_plus: ^7.1.0
+  firebase_dynamic_links: ^5.3.6
+  firebase_database: ^10.2.6
+  firebase_analytics: ^10.5.0
 
 dev_dependencies:
   flutter_test:
