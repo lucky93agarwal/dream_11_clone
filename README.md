@@ -17,8 +17,8 @@ A working  fantasy sports platform Mobile App clone built in Flutter using Fireb
 
 
 ## Features
-* Slider Screen
-* Sign In Screen
+* Splash Screen
+* Update App Screen
 * Sign Up Screen
 * Forgot Screen
 * Verification Screen
