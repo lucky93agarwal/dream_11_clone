@@ -8,19 +8,24 @@ import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class SplashController extends GetxController {
+
+  RxString data = "".obs;
   @override
   void onInit() {
     // TODO: implement onInit
+
+    super.onInit();
+    data.value = "App is updated = 1234";
     WidgetsBinding.instance.addPostFrameCallback((_) {
       timer();
     });
-    super.onInit();
   }
 
   /// Check if current app is updated app or not
   /// If app is not updated then redirect user to update app screen
   void timer() async {
     final isAppUpdated = await _checkAppVersion();
+    cPrint("App is updated = "+isAppUpdated.toString());
     if (isAppUpdated) {
       cPrint("App is updated");
       Future.delayed(const Duration(seconds: 1)).then((_) {
@@ -42,7 +47,10 @@ class SplashController extends GetxController {
     final buildNo = packageInfo.buildNumber;
     final config = await _getAppVersionFromFirebaseConfig();
 
-    if (config != null && config['name'] == currentAppVersion && config['versions'].contains(int.tryParse(buildNo))) {
+
+
+
+    if (config != null && config['name'] == currentAppVersion && config['versions']==int.tryParse(buildNo)) {
       return true;
     } else {
       if (kDebugMode) {
@@ -53,7 +61,7 @@ class SplashController extends GetxController {
             "If you are planning to publish app on store then please update app version in firebase config");
         return true;
       }
-      Navigator.pushReplacement(context, UpdateApp.getRoute());
+     // Navigator.pushReplacement(context, UpdateApp.getRoute());
       return false;
     }
   }
@@ -78,9 +86,13 @@ class SplashController extends GetxController {
   /// For package detail check:-  https://pub.dev/packages/firebase_remote_config#-readme-tab-
   Future<Map?> _getAppVersionFromFirebaseConfig() async {
     final FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
+    await remoteConfig.setConfigSettings(RemoteConfigSettings(
+        fetchTimeout: const Duration(seconds: 1),
+        minimumFetchInterval: const Duration(seconds: 1)));
     await remoteConfig.fetchAndActivate();
     // await remoteConfig.activateFetched();
     var data = remoteConfig.getString('supportedBuild');
+    cPrint("lucky == "+jsonDecode(data).toString());
     if (data.isNotEmpty) {
       return jsonDecode(data) as Map;
     } else {
