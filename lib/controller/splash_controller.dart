@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dream_11_clone/utils/route_path.dart';
 import 'package:dream_11_clone/utils/utility.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/foundation.dart';
@@ -9,13 +10,13 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 class SplashController extends GetxController {
 
-  RxString data = "".obs;
+  RxString data = "App data".obs;
   @override
   void onInit() {
     // TODO: implement onInit
 
     super.onInit();
-    data.value = "App is updated = 1234";
+    Utility.logScreen("Splash");
     WidgetsBinding.instance.addPostFrameCallback((_) {
       timer();
     });
@@ -25,10 +26,14 @@ class SplashController extends GetxController {
   /// If app is not updated then redirect user to update app screen
   void timer() async {
     final isAppUpdated = await _checkAppVersion();
-    cPrint("App is updated = "+isAppUpdated.toString());
     if (isAppUpdated) {
       cPrint("App is updated");
-      Future.delayed(const Duration(seconds: 1)).then((_) {
+      Utility.logEvent("App is updated");
+
+      Future.delayed(const Duration(seconds: 4)).then((_) {
+
+
+
         /*var state = Provider.of<AuthState>(context, listen: false);
         state.getCurrentUser();*/
       });
@@ -61,6 +66,8 @@ class SplashController extends GetxController {
             "If you are planning to publish app on store then please update app version in firebase config");
         return true;
       }
+      Get.offAllNamed(RoutePath.updateApp);
+
      // Navigator.pushReplacement(context, UpdateApp.getRoute());
       return false;
     }

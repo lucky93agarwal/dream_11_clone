@@ -8,11 +8,14 @@ import 'dart:developer' as developer;
 import 'package:intl/intl.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 final kAnalytics = FirebaseAnalytics.instance;
+final kCrashlytics = FirebaseCrashlytics.instance;
 final DatabaseReference kDatabase = FirebaseDatabase.instance.ref();
 
 void cPrint(dynamic data, {String? errorIn, String? event, String label = 'Log'}) {
+
   /// Print logs only in development mode
   if (kDebugMode) {
     if (errorIn != null) {
@@ -154,6 +157,15 @@ class Utility {
         ? kAnalytics.logEvent(name: event, parameters: parameter)
         : print("[EVENT]: $event");
   }
+  static void logScreen(String event, {Map<String, dynamic>? parameter}) {
+    kReleaseMode
+        ? kAnalytics.setCurrentScreen(screenName: event)
+        : print("[EVENT]: $event");
+  }
+
+  static void logCrash(String userUID){
+    kCrashlytics.setCustomKey('userUID', userUID);
+  }
 
   static void debugLog(String log, {dynamic param = ""}) {
     final String time = DateFormat("mm:ss:mmm").format(DateTime.now());
@@ -191,6 +203,8 @@ class Utility {
     userName = '@$name$id';
     return userName;
   }
+
+
 
   static bool validateCredentials(
       BuildContext context, String? email, String? password) {
