@@ -6,9 +6,9 @@ A working  fantasy sports platform Mobile App clone built in Flutter using Fireb
 ## Screen
 Splash Page               |  Login Page               | Signup Page               |  Forgot Password Page
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/splash.jpeg?raw=true)|![]
-(https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/update.jpeg?raw=true)|![]
-(https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_3.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_4.jpg?raw=true)|
+<img src="https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/splash.jpeg" width="200"  title="Slider Screen"/>
+<img src="https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/update.jpeg" width="200"  title="Slider Screen"/>
+![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_3.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_4.jpg?raw=true)|
 
 
 
