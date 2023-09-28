@@ -4,10 +4,11 @@ A working  fantasy sports platform Mobile App clone built in Flutter using Fireb
 
 
 ## Screen
+<p float="left">
 <img src="https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/splash.jpeg" width="200"  title="Splash Screen"/>
 <img src="https://github.com/lucky93agarwal/dream_11_clone/blob/main/screenshots/Auth/update.jpeg" width="200"  title="Update App Screen"/>
 
-
+</p>
 
 
 ## Download App
