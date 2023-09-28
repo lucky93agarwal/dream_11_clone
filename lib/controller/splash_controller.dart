@@ -16,6 +16,7 @@ class SplashController extends GetxController {
     // TODO: implement onInit
 
     super.onInit();
+    data.value = "MSL Dream Plus is an Indian fantasy sports UI platform that allows users to play fantasy cricket, hockey, football, kabaddi, handball, basketball, volleyball, rugby, futsal, American football and baseball. ";
     Utility.logScreen("Splash");
     WidgetsBinding.instance.addPostFrameCallback((_) {
       timer();
@@ -58,6 +59,7 @@ class SplashController extends GetxController {
     if (config != null && config['name'] == currentAppVersion && config['versions']==int.tryParse(buildNo)) {
       return true;
     } else {
+
       if (kDebugMode) {
         cPrint("Latest version of app is not installed on your system");
         cPrint(

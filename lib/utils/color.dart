@@ -233,8 +233,8 @@ extension AppTheme on ThemeData {
   Color get tableRowColor =>
       Get.isDarkMode ? const Color(0xFF353555) : whiteColor;
   Color get redColor => Colors.red;
-  Color get bgDarkColor => const Color(0xff2a0040);
-  Color get bgLightColor => const Color(0xffffffff);
+  Color get bgDarkColor => const Color(0xffb40001);
+  Color get bgLightColor => const Color(0xffb40001);
   Color get appMainDarkColor => const Color(0xff8937FF);
   Color get secondMainDarkColor => const Color(0xffE85BFF);
   Color get thirdMainDarkColor => const Color(0xFF8937FF);

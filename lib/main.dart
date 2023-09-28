@@ -1,4 +1,5 @@
 import 'package:dream_11_clone/bindings/global_binding.dart';
+import 'package:dream_11_clone/utils/color.dart';
 import 'package:dream_11_clone/utils/route.dart';
 import 'package:dream_11_clone/utils/route_path.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialBinding: GlobalBinding(),
       theme: ThemeData(
+        backgroundColor: Theme.of(context).bgLightColor,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

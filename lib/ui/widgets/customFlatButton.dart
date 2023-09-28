@@ -34,7 +34,7 @@ class CustomFlatButton extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all(
                 loading
                     ? Theme.of(context).disabledColor
-                    : color ?? Theme.of(context).primaryColor,
+                    : color ?? Colors.white,
               ),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
@@ -54,7 +54,7 @@ class CustomFlatButton extends StatelessWidget {
                     child: FittedBox(
                       child: CircularProgressIndicator(
                         valueColor: AlwaysStoppedAnimation(
-                            color ?? Theme.of(context).colorScheme.onPrimary),
+                            color ?? const Color(0xff222222)),
                       ),
                     ),
                   )
@@ -67,7 +67,7 @@ class CustomFlatButton extends StatelessWidget {
               GoogleFonts.mulish(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
-                color: Theme.of(context).colorScheme.onPrimary,
+                color:  const Color(0xff222222),
               ),
         ),
       ),
