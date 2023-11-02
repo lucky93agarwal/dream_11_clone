@@ -151,7 +151,7 @@ class AppText {
 
   static const String iCertifyThatIAmAbove18Years = 'iCertifyThatIAmAbove18Years';
 
-  static const String next = 'next';
+  static const String nexts = 'next';
   static const String notAMember = 'notAMember';
 
 }
