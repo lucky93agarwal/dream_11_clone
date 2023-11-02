@@ -120,4 +120,38 @@ class AppText {
   static const int userTextPrefixIconEditText = 4;
   static const int hidePrefixIconEditText = 10;
   static const int searchPrefixIconEditText = 6;
+
+
+  ///select language screen...
+  static const String selectLanguage = 'selectLanguage';
+  static const String languageDetails = 'languageDetails';
+  static const String english = 'english';
+  static const String hindi = 'hindi';
+  static const String englishTwo = 'English';
+  static const String hindiTwo = 'Hindi';
+  static const String continuess = 'constinue';
+
+  static const String register = 'register';
+  static const String invitedByAFriend = 'invitedByAFriend';
+  static const String enterCode = 'enterCode';
+  static const String alreadyAUser = 'alreadyAUser';
+  static const String logIn = 'logIn';
+
+  static const String slider1 = 'slider1';
+  static const String slider1D = 'slider1D';
+
+  static const String slider2 = 'slider2';
+  static const String slider2D = 'slider2D';
+
+  static const String slider3 = 'slider3';
+  static const String slider3D = 'slider3D';
+
+  static const String slider4 = 'slider4';
+  static const String slider4D = 'slider4D';
+
+  static const String iCertifyThatIAmAbove18Years = 'iCertifyThatIAmAbove18Years';
+
+  static const String next = 'next';
+  static const String notAMember = 'notAMember';
+
 }

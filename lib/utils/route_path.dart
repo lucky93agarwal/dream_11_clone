@@ -1,6 +1,8 @@
 class RoutePath {
   static String splash = '/';
   static String updateApp = '/update';
+  static String welcome = '/welcome';
+  static String language = '/Language';
   static String loginScreen = '/Login';
   static String forgotScreen = '/forgot';
   static String signupScreen = '/signup';

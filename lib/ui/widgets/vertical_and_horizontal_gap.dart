@@ -33,3 +33,15 @@ Widget verticalSpacing(double height) => SizedBox(
   height: height,
 );
 
+BoxDecoration myCustomDecoration =  const BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topCenter, // Gradient starts at the top center
+    end: Alignment.bottomCenter, // Gradient ends at the bottom center
+    colors: [
+      Color(0xff140107),
+      Color(0xff470f1a), // Start color
+      Color(0xff010417), // End color
+    ],
+  ),
+);
+

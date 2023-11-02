@@ -1,5 +1,4 @@
 import 'package:dream_11_clone/controller/splash_controller.dart';
-import 'package:dream_11_clone/ui/widgets/title_text.dart';
 import 'package:dream_11_clone/utils/color.dart';
 import 'package:dream_11_clone/utils/font_utils.dart';
 import 'package:dream_11_clone/utils/images.dart';
@@ -11,6 +10,7 @@ class SplashScreen extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Theme.of(context).bgLightColor,
       body: Container(

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dream_11_clone/controller/language_controller.dart';
 import 'package:dream_11_clone/utils/route_path.dart';
 import 'package:dream_11_clone/utils/utility.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
@@ -33,8 +34,8 @@ class SplashController extends GetxController {
 
       Future.delayed(const Duration(seconds: 4)).then((_) {
 
-
-
+        Get.lazyPut(()=>LanguageController());
+        Get.offAllNamed(RoutePath.language);
         /*var state = Provider.of<AuthState>(context, listen: false);
         state.getCurrentUser();*/
       });
@@ -54,7 +55,7 @@ class SplashController extends GetxController {
     final config = await _getAppVersionFromFirebaseConfig();
 
 
-
+    cPrint("currentAppVersion == "+currentAppVersion+", buildNo == "+buildNo.toString());
 
     if (config != null && config['name'] == currentAppVersion && config['versions']==int.tryParse(buildNo)) {
       return true;
@@ -70,7 +71,6 @@ class SplashController extends GetxController {
       }
       Get.offAllNamed(RoutePath.updateApp);
 
-     // Navigator.pushReplacement(context, UpdateApp.getRoute());
       return false;
     }
   }
